@@ -37,11 +37,11 @@ export default function Home() {
     setImg(null)
     setArray(JSON.parse(localStorage.getItem("theArray")))
   },[])
-  const [name, setName] = useState("k")
-  const [email, setEmail] = useState("string@vitstudent.ac.in")
-  const [phno, setPhno] = useState("99")
-  const [address, setAddress] = useState("adsf")
-  const [gender, setGender] = useState("male")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phno, setPhno] = useState("")
+  const [address, setAddress] = useState("")
+  const [gender, setGender] = useState("")
   const [img, setImg] = useState(null);
   const isEmailValid = ()=>{
     
