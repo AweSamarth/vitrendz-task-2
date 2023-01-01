@@ -6,6 +6,7 @@ import Webcam from "react-webcam";
 import { useState, useRef, useCallback, useEffect } from "react";
 import {useRouter} from "next/router"
 import Router from "next/dist/server/router";
+import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -106,6 +107,8 @@ export default function Home() {
         <div className="m-2"><label htmlFor="address">Address</label><input onChange = {(event)=>setAddress(event.target.value)}id="address" type="text" className="h-8 ml-3 w-72" value={address} required/></div>
         <div className="m-2"><label htmlFor="gender">Gender</label><input id="gender" onChange={(event)=>setGender(event.target.value)} type="text" className="h-8 ml-4 w-72" value={gender} required/></div>
         <div><button type="submit" className="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">Submit</button></div>
+        <div><Link href="/something"> <button className="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded mt-4">Congrats page</button></Link></div>
+
         </form>
         </div>
 
