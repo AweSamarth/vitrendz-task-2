@@ -19,7 +19,7 @@ export default function Something() {
             {theArray==null?"":(      <div className='flex justify-center'>
         {theArray.map((element)=>{
 
-            return (<div className='flex  justify-center border-red-600 ml-1 mr-1' key={Math.random()}><Image src={element} width={250} height={250} alt={"the image"} /></div>)
+            return (<div className='flex  justify-center ml-1 mr-1' key={Math.random()}><Image src={element} width={250} height={250} alt={"the image"} /></div>)
         })}
     </div>)}
     </div>

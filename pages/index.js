@@ -64,10 +64,10 @@ export default function Home() {
     console.log(imageSrc)
   }, [webcamRef, setImg]);
   return (
-    <div className="p justify-evenly flex p-4 m-4 border-2 border-red-400">
+    <div className="p justify-evenly flex p-4 m-4 ">
     
       {img===null?
-      (<div className="flex flex-col border-2 w-max">
+      (<div className="flex flex-col w-max">
       <Webcam
         audio={false}
         screenshotQuality={0.9}
@@ -79,14 +79,14 @@ export default function Home() {
         videoConstraints= {videoConstraints}
 
       />
-      <div className="border-2 flex justify-center m-4">
+      <div className="flex justify-center m-4">
       <button className= "w-[40%] bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded" onClick={capture}>Click photo</button>
       </div>
       </div>
       ):
-      (<div className="flex flex-col border-2 w-max">
+      (<div className="flex flex-col w-max">
           <img src= {img} alt = "screenshot" />
-          <div className="border-2 flex justify-center m-4">
+          <div className="flex justify-center m-4">
 
           <button className="w-[40%] bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded" onClick={()=>setImg(null)}>Retake</button>
           </div>
@@ -96,7 +96,7 @@ export default function Home() {
       
 
       
-              <div className="flex flex-col border-2 w-[50%] p-2">        
+              <div className="flex flex-col w-[50%] p-2">        
 
       <form onSubmit={(event)=>handleSubmit(event)}>
 
